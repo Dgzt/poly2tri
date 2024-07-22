@@ -44,7 +44,7 @@ public abstract class TriangulationPoint extends Point {
 
     @Override
     public String toString() {
-        return "[" + getX() + "," + getY() + "]";
+        return "[" + getX() + "," + getY() + "," + getZ() + "]";
     }
 
     public abstract double getX();
@@ -92,7 +92,7 @@ public abstract class TriangulationPoint extends Point {
     public boolean equals(Object obj) {
         if (obj instanceof TriangulationPoint) {
             TriangulationPoint p = (TriangulationPoint) obj;
-            return getX() == p.getX() && getY() == p.getY();
+            return getX() == p.getX() && getY() == p.getY() && getZ() == p.getZ();
         }
         return super.equals(obj);
     }
